@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=>['auth']], function () {
+	Route::resource('user','UserController');
 	Route::resource('supplier','SupplierController');
 	Route::resource('karyawan','KaryawanController');
 	Route::resource('barang','BarangController');

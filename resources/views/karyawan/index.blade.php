@@ -40,7 +40,7 @@
 							<td>
 								<a class="btn btn-warning" href="/karyawan/{{$data->id}}/edit">Edit</a>
 								<td>
-									<a class="btn btn-primary" href="/karyawan/{{$data->id}}">Show</a>
+									<a class="btn btn-primary" href="/karyawan/{{$data->id}}">Detail</a>
 								</td>
 								<td>
 									<form action="{{route('karyawan.destroy', $data->id )}}" method="post">

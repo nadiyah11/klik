@@ -41,18 +41,20 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                       @if (Auth::check())
+                      <li><a href="{{ url('/home') }}">Dashboard</a></li>
                       @role('admin')
-                    <li><a href="{{ url('/home') }}">Dashboard</a></li>
-                    <li><a href="{{ route('karyawan.index') }}">Karyawan</a></li>
-                    <li><a href="{{ route('supplier.index') }}">Supplier</a></li>
-                    <li><a href="{{ route('barang.index') }}">Barang</a></li>
-                    <li><a href="{{ route('tran_masuk.index') }}">Pemasukan</a></li>
-                    <li><a href="{{ route('tran_keluar.index') }}">Pengeluaran</a></li>
+                            <li><a href="{{ route('user.index') }}">Pengguna</a></li>
+                            <li><a href="{{ route('karyawan.index') }}">Karyawan</a></li>
+                            <li><a href="{{ route('supplier.index') }}">Supplier</a></li>
+                            <li><a href="{{ route('barang.index') }}">Barang</a></li>
+                            <li><a href="{{ route('tran_masuk.index') }}">Pemasukan</a></li>
+                            <li><a href="{{ route('tran_keluar.index') }}">Pengeluaran</a></li>
                         @endrole
-                        <li><a href="{{ url('/home') }}">Dashboard</a></li>
+                        @role('member')
                         <li><a href="{{ route('barang.index') }}">Barang</a></li>
                         <li><a href="{{ route('tran_masuk.index') }}">Pemasukan</a></li>
                         <li><a href="{{ route('tran_keluar.index') }}">Pengeluaran</a></li>
+                        @endrole
                     @endif
                     </ul>
 
@@ -92,8 +94,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script><!-- 
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>

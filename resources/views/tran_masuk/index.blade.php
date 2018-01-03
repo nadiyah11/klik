@@ -44,7 +44,7 @@
 							<td>
 								<a class="btn btn-warning" href="/tran_masuk/{{$data->id}}/edit">Edit</a>
 								<td>
-									<a class="btn btn-primary" href="/tran_masuk/{{$data->id}}">Show</a>
+									<a class="btn btn-primary" href="/tran_masuk/{{$data->id}}">Detail</a>
 								</td>
 								<td>
 									<form action="{{route('tran_masuk.destroy', $data->id )}}" method="post">

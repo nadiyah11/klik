@@ -32,7 +32,7 @@
 							<td>
 								<a class="btn btn-warning" href="/supplier/{{$data->id}}/edit">Edit</a>
 								<td>
-									<a class="btn btn-primary" href="/supplier/{{$data->id}}">Show</a>
+									<a class="btn btn-primary" href="/supplier/{{$data->id}}">Detail</a>
 								</td>
 								<td>
 									<form action="{{route('supplier.destroy', $data->id )}}" method="post">

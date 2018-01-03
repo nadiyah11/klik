@@ -38,7 +38,7 @@
 							<td>
 								<a class="btn btn-warning" href="/barang/{{$data->id}}/edit">Edit</a>
 								<td>
-									<a class="btn btn-primary" href="/barang/{{$data->id}}">Show</a>
+									<a class="btn btn-primary" href="/barang/{{$data->id}}">Detail</a>
 								</td>
 								<td>
 									<form action="{{route('barang.destroy', $data->id )}}" method="post">

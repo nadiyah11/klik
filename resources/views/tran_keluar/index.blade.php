@@ -38,7 +38,7 @@
 							<td>
 								<a class="btn btn-warning" href="/tran_keluar/{{$data->id}}/edit">Edit</a>
 								<td>
-									<a class="btn btn-primary" href="/tran_keluar/{{$data->id}}">Show</a>
+									<a class="btn btn-primary" href="/tran_keluar/{{$data->id}}">Detail</a>
 								</td>
 								<td>
 									<form action="{{route('tran_keluar.destroy', $data->id )}}" method="post">
