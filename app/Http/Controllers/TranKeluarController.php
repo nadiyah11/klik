@@ -42,11 +42,12 @@ class TranKeluarController extends Controller
     public function store(Request $request)
     {
         //
+        $max = Barang::findOrFail($request->barang_id);
          $this->validate($request, [
             'tgl_keluar' => 'required',
             'user_id' => 'required|exists:users,id',
             'barang_id' => 'required|exists:barangs,id',
-            'jumlahk' => 'required||numeric']);
+            'jumlahk' => 'required||numeric|min:0']);
         $tran_keluar = new Tran_Keluar;
         $tran_keluar->tgl_keluar=$request->tgl_keluar;
         $tran_keluar->user_id=$request->user_id;
@@ -56,6 +57,7 @@ class TranKeluarController extends Controller
 
         $barang = Barang::findOrFail($request->barang_id);
         $barang->stock = $barang->stock - $request->jumlahk;
+
         $barang->save();
 
         Session::flash("flash_notification", [
